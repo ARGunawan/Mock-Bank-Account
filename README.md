@@ -28,7 +28,6 @@ GIVEN I am on any page displaying the Account Balance
 WHEN I view the Account Balance display area
 THEN I should see an Account Balance that accurately represents my Debits subtracted from my Credits
 AND I should be able to see a negative account balance if I have more Debits than Credits
-------------------------------------------------------------------------------------------------------------------
 
 
 Viewing the Debits page:
@@ -100,4 +99,3 @@ Viewing the Account Balance on the Credits page:
 GIVEN I am on the Credits page
 WHEN I view the Account Balance display area
 THEN I should see my Account Balance displayed
-----------------------------------------------------------------------------------------------------------------------------------------------
