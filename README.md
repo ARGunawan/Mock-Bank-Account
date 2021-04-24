@@ -12,7 +12,9 @@ React Router App Project:
 - The Credits index endpoint is located at https://moj-api.herokuapp.com/credits
  
  Instructions:
- Add the following methods to the app:
+ 
+ Add the following methods to the app
+ ------------------------------------
  - Updating the Account Balance
  - Adding Debits
  - Adding Credits
