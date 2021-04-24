@@ -19,17 +19,20 @@ The Credits index endpoint is located at https://moj-api.herokuapp.com/credits
  - Adding Credits
  
  Example for each method below
- - Updating the Account Balance:
+ 
+Updating the Account Balance:
+------------------------------------------------------------------------------------------------------------------
 Making the Account Balance dynamic:
 
 GIVEN I am on any page displaying the Account Balance
 WHEN I view the Account Balance display area
 THEN I should see an Account Balance that accurately represents my Debits subtracted from my Credits
 AND I should be able to see a negative account balance if I have more Debits than Credits
+------------------------------------------------------------------------------------------------------------------
 
-- Adding Debits
+
 Viewing the Debits page:
-
+-----------------------------------------------------------------------------------------------------------------
 GIVEN I am on the Home Page
 WHEN I click on 'Debits'
 THEN I should be redirected to the Debits page
@@ -60,9 +63,11 @@ Viewing the Account Balance on the Debits page:
 GIVEN I am on the Debits page
 WHEN I view the Account Balance display area
 THEN I should see my Account Balance displayed
+------------------------------------------------------------------------------------------------------------------
 
-- Adding Credits:
+
 Adding Credits
+------------------------------------------------------------------------------------------------------------------
 Viewing the Credits page:
 
 GIVEN I am on the Home Page
@@ -95,4 +100,4 @@ Viewing the Account Balance on the Credits page:
 GIVEN I am on the Credits page
 WHEN I view the Account Balance display area
 THEN I should see my Account Balance displayed
-
+----------------------------------------------------------------------------------------------------------------------------------------------
