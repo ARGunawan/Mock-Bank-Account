@@ -8,9 +8,8 @@ Alfonso Gunawan, James Yoo, Caitlin-Dawn Sangcap, Ifte Ahmed
 React Router App Project:
 - Linked API's to React Router
 - Add more features to the banking app (see below). You will need to access the following API endpoints:
-
-The Debits index endpoint is located at https://moj-api.herokuapp.com/debits
-The Credits index endpoint is located at https://moj-api.herokuapp.com/credits
+- The Debits index endpoint is located at https://moj-api.herokuapp.com/debits
+- The Credits index endpoint is located at https://moj-api.herokuapp.com/credits
  
  Instructions:
  Add the following methods to the app:
