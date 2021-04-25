@@ -14,7 +14,7 @@ class App extends Component {
     super();
 
     this.state = {
-      accountBalance: 14568.27,
+      accountBalance: 0,
       debitInfo: [],
       debitBalance: 0,
       creditBalance: 0,
@@ -47,6 +47,7 @@ class App extends Component {
           this.setState({
             debitInfo: [...this.state.debitInfo, holder],
             debitBalance: this.state.debitBalance + data[a].amount,
+            accountBalance: this.state.accountBalance - data[a].amount,
           });
         }
       })
@@ -66,6 +67,7 @@ class App extends Component {
           this.setState({
             creditInfo: [...this.state.creditInfo, holder],
             creditBalance: this.state.creditBalance + data[i].amount,
+            accountBalance: this.state.accountBalance + data[i].amount,
           });
         }
       })
