@@ -7,7 +7,7 @@ class Credits extends Component {
       <div>
         <h1>Credit</h1>
 
-        <Link to="/">Home Page</Link>
+        <Link to ="/">Home Page</Link>
       </div>
     );
   }

@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 class Home extends Component {
   render() {
     return (
-      <div>
-        <img
-          src="https://letstalkpayments.com/wp-content/uploads/2016/04/Bank.png"
-          alt="bank"
-        />
+      <div className = "App">
+      <div className="App-header">
+        <img id = "img" src = "https://bomarsecurity.com/wp-content/uploads/2013/06/bank-header.jpg" alt="bank"/>
         <h1>Bank of React</h1>
 
-        <Link to="/userProfile">User Profile</Link>
-        <Link to="/credits">Credits</Link>
-        <Link to="/debits">Debits</Link>
-        <AccountBalance accountBalance={this.props.accountBalance} />
+        <Link to ="/userProfile">User Profile</Link>
+        <br/>
+        <Link to ="/credits">Credits</Link>
+        <br/>
+        <Link to ="/debits">Debits</Link>
+        <br/>
+        <AccountBalance accountBalance =  {this.props.accountBalance} />
+      </div>
       </div>
     );
   }
