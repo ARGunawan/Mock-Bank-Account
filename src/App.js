@@ -52,8 +52,8 @@ class App extends Component {
         let holder = []; // hold the data temporary
         for( let i = 0; i< data.length; i++) //loops through data
         {
-          holder = [data[a].description, data[a].amount, data[a].date]; //loads data
-          this.setState({creditInfo:[...this.state.creditInfo, holder], creditBalance: this.state.creditBalance + data[a].amount})
+          holder = [data[i].description, data[i].amount, data[i].date]; //loads data
+          this.setState({creditInfo:[...this.state.creditInfo, holder], creditBalance: this.state.creditBalance + data[i].amount})
         }
       })
       .catch((err) => console.log(err)); //if data doesnt load catch error
