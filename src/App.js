@@ -17,6 +17,8 @@ class App extends Component {
       accountBalance: 14568.27,
       debitInfo: [],
       debitBalance: 0,
+      creditBalance: 0,
+      creditInfo: [],
       currentUser: {
         userName: "joe_shmo",
         memberSince: "07/23/96",
@@ -24,6 +26,8 @@ class App extends Component {
     };
     this.updateDebitBalance = this.updateDebitBalance.bind(this);
     this.updateDebitInfo = this.updateDebitInfo.bind(this);
+    this.updateCreditBalance = this.updateCreditBalance.bind(this);
+    this.updateCreditInfo = this.updateCreditInfo.bind(this);
   }
 
   componentDidMount = () => {
@@ -47,6 +51,25 @@ class App extends Component {
         }
       })
       .catch((err) => console.log(err));
+
+    axios
+      .get("https://moj-api.herokuapp.com/credits") //gets data from api
+      .then((response) => {
+        const data = response.data; //stores data from api
+        let holder = []; // hold the data temporary
+        for (
+          let i = 0;
+          i < data.length;
+          i++ //loops through data
+        ) {
+          holder = [data[i].description, data[i].amount, data[i].date]; //loads data
+          this.setState({
+            creditInfo: [...this.state.creditInfo, holder],
+            creditBalance: this.state.creditBalance + data[i].amount,
+          });
+        }
+      })
+      .catch((err) => console.log(err)); //if data doesnt load catch error
   };
 
   //update functions
@@ -58,6 +81,17 @@ class App extends Component {
   }
   updateDebitInfo(event) {
     this.setState({ debitInfo: [event, ...this.state.debitInfo] });
+  }
+
+  updateCreditInfo(event) {
+    this.setState({ creditInfo: [event, ...this.state.debitInfo] });
+  }
+
+  updateCreditBalance(event) {
+    this.setState({
+      accountBalance: this.state.accountBalance + event,
+      creditBalance: this.state.creditBalance + event,
+    });
   }
 
   render() {
