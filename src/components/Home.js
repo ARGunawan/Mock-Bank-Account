@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 class Home extends Component {
   render() {
     return (
-      <div className = "App">
-      <div className="App-header">
+      <div>
+      <div>
         <img id = "img" src = "https://bomarsecurity.com/wp-content/uploads/2013/06/bank-header.jpg" alt="bank"/>
         <h1>Bank of React</h1>
 
