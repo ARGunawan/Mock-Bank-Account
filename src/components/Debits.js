@@ -7,6 +7,7 @@ class Debits extends Component {
     this.submitDebit = this.submitDebit.bind(this);
   }
 
+//create event for debit so that it will update return
   submitDebit(event) {
     event.preventDefault();
     let temp = [

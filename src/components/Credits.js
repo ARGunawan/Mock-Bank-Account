@@ -15,8 +15,10 @@ class Credits extends Component {
       event.target.creditAmount.value,
       new Date().toLocaleString(),
     ];
-    this.props.updateCreditBalance(Number(event.target.creditAmount.value));
+    
     this.props.updateCreditInfo(creditData);
+    this.props.updateCreditBalance(Number(event.target.creditAmount.value));
+    
   }
 
   render() {
