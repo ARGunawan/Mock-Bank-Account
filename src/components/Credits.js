@@ -24,11 +24,11 @@ class Credits extends Component {
       <div>
         <Link to = "/"> Home Page </Link>
         <br/>
-        <Link to =" /userProfile"> User Profile</Link>
+        <Link to = "/userProfile"> User Profile</Link>
         <br/>
-        <Link to ="/debits"> Debits </Link>
+        <Link to = "/debits"> Debits </Link>
         <br/>
-        <Link to ="/login">Login</Link>
+        <Link to = "/login">Login</Link>
         <br/>
         <h1>Credit</h1>
         <p>Account Balance: {this.props.accountBalance}</p>
