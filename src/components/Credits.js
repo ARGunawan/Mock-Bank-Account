@@ -41,9 +41,9 @@ class Credits extends Component {
         <div>
           {this.props.creditInfo.map((x, index) => (
             <div>
-              <li>Description: {x[0]}</p>
-              <li>Amount: ${x[1]}</p>
-              <li>Date: {x[2]}</p>
+              <li>Description: {x[0]}</li>
+              <li>Amount: ${x[1]}</li>
+              <li>Date: {x[2]}</li>
             </div>
           ))}
         </div>
