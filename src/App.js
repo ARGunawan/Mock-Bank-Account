@@ -124,6 +124,7 @@ class App extends Component {
         updateDebitInfo={this.updateDebitInfo}
         debitInfo={this.state.debitInfo}
         debitBalance={this.state.debitBalance}
+        accountBalance={this.state.accountBalance}
       />
     );
 
