@@ -1,6 +1,6 @@
 WebDev-Assignment-7
 
-Link to the deployed website: (*Insert the link here when the github pages website is deployed*)
+Link to the deployed website: https://argunawan.github.io/WebDev-Assignment-7/
 
 Contributors:
 Alfonso Gunawan, James Yoo, Caitlin-Dawn Sangcap, Ifte Ahmed
