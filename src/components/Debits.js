@@ -52,8 +52,8 @@ class Debits extends Component {
           </div>
 
           <div>
-            {this.props.debitInfo.map((x, index) => (
-              <div key={index}>
+            {this.props.debitInfo.map((x) => (
+              <div>
                 <ul>
                   <li> Description: {x[0]}</li>
                   <li> Amount: ${x[1]} </li>

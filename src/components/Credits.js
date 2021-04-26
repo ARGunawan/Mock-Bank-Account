@@ -22,11 +22,11 @@ class Credits extends Component {
   render() {
     return (
       <div>
-        <Link to="/">Home Page</Link>
+        <Link to = "/"> Home Page </Link>
         <br/>
-        <Link to ="/userProfile">User Profile</Link>
+        <Link to =" /userProfile"> User Profile</Link>
         <br/>
-        <Link to ="/debits">Debits</Link>
+        <Link to ="/debits"> Debits </Link>
         <br/>
         <Link to ="/login">Login</Link>
         <br/>
@@ -34,19 +34,19 @@ class Credits extends Component {
         <p>Account Balance: {this.props.accountBalance}</p>
         <form onSubmit={this.clickAddCredit}>
           <input
-            type="text"
-            name="creditDescription"
-            placeholder="Enter Credit Description"
+            type = "text"
+            name = "creditDescription"
+            placeholder = "Enter Credit Description"
           ></input>
           <input
-            type="number"
-            name="creditAmount"
-            placeholder="Enter Credit Amount"
+            type = "number"
+            name = "creditAmount"
+            placeholder = "Enter Credit Amount"
           ></input>
-          <input type="submit"></input>
+          <input type = "submit"></input>
         </form>
         <div>
-          {this.props.creditInfo.map((x, index) => (
+          {this.props.creditInfo.map((x) => (
             <div>
               <li>Description: {x[0]}</li>
               <li>Amount: ${x[1]}</li>
