@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: whitesmoke;
-  text-align: center;
 }
 
 code {
@@ -21,5 +20,4 @@ img
 Center
 {
   text-align: center;
-
 }
