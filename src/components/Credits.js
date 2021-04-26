@@ -24,7 +24,7 @@ class Credits extends Component {
       <div>
         <Link to = "/"> Home Page </Link>
         <br/>
-        <Link to = "/userProfile"> User Profile</Link>
+        <Link to ="/userProfile"> User Profile</Link>
         <br/>
         <Link to = "/debits"> Debits </Link>
         <br/>
