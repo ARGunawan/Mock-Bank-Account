@@ -86,7 +86,7 @@ class App extends Component {
   }
 
   updateCreditInfo(event) {
-    this.setState({ creditInfo: [event, ...this.state.debitInfo] });
+    this.setState({ creditInfo: [event, ...this.state.creditInfo] });
   }
 
   updateCreditBalance(event) {
