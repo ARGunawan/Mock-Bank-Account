@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AccountBalance from "./AccountBalance";
 
 class Debits extends Component {
   constructor(props) {
@@ -24,7 +23,13 @@ class Debits extends Component {
     return (
       <div>
         <Link to="/"> Home</Link>
-
+        <br/>
+        <Link to ="/userProfile">User Profile</Link>
+        <br/>
+        <Link to ="/credits">Credits</Link>
+        <br/>
+        <Link to ="/login">Login</Link>
+        <br/>
         <div>
           <div>
             <h4>

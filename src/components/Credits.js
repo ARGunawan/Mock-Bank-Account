@@ -23,6 +23,13 @@ class Credits extends Component {
     return (
       <div>
         <Link to="/">Home Page</Link>
+        <br/>
+        <Link to ="/userProfile">User Profile</Link>
+        <br/>
+        <Link to ="/debits">Debits</Link>
+        <br/>
+        <Link to ="/login">Login</Link>
+        <br/>
         <h1>Credit</h1>
         <p>Account Balance: {this.props.accountBalance}</p>
         <form onSubmit={this.clickAddCredit}>
