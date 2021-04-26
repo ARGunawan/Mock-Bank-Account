@@ -21,13 +21,13 @@ class Debits extends Component {
   render() {
     return (
       <div>
-        <Link to="/"> Home</Link>
+        <Link to= "/" > Home</Link>
         <br/>
-        <Link to ="/userProfile">User Profile</Link>
+        <Link to = "/userProfile" >User Profile</Link>
         <br/>
-        <Link to ="/credits">Credits</Link>
+        <Link to = "/credits" >Credits</Link>
         <br/>
-        <Link to ="/login">Login</Link>
+        <Link to = "/login" >Login</Link>
         <br/>
         <div>
           <div>
