@@ -131,7 +131,7 @@ class App extends Component {
     );
 
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Route exact path = "/" render={HomeComponent} />
           <Route exact path = "/userProfile" render={UserProfileComponent} />
