@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AccountBalance from "./AccountBalance";
 
 class Debits extends Component {
   constructor(props) {

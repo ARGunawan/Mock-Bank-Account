@@ -15,44 +15,25 @@ class App extends Component {
 
     this.state = {
       accountBalance: 0,
-      debitInfo: [],
       debitBalance: 0,
       creditBalance: 0,
+      debitInfo: [],
       creditInfo: [],
       currentUser: {
         userName: "joe_shmo",
         memberSince: "07/23/96",
       },
     };
+
+  
+    this.updateCreditBalance = this.updateCreditBalance.bind(this);
     this.updateDebitBalance = this.updateDebitBalance.bind(this);
     this.updateDebitInfo = this.updateDebitInfo.bind(this);
-    this.updateCreditBalance = this.updateCreditBalance.bind(this);
     this.updateCreditInfo = this.updateCreditInfo.bind(this);
   }
 
   componentDidMount = () => {
-    //getting the debits when app is mounted
-    axios
-      .get("https://moj-api.herokuapp.com/debits") //get the data
-      .then((response) => {
-        const data = response.data;
-        //console.log(data);
-        let holder = []; // hold the data for now
-        for (
-          let a = 0;
-          a < data.length;
-          a++ //go through all the data
-        ) {
-          holder = [data[a].description, data[a].amount, data[a].date]; //load the data
-          this.setState({
-            debitInfo: [...this.state.debitInfo, holder],
-            debitBalance: this.state.debitBalance + data[a].amount,
-            accountBalance: this.state.accountBalance - data[a].amount,
-          });
-        }
-      })
-      .catch((err) => console.log(err));
-
+    //getting the credits when app is mounted
     axios
       .get("https://moj-api.herokuapp.com/credits") //gets data from api
       .then((response) => {
@@ -72,6 +53,27 @@ class App extends Component {
         }
       })
       .catch((err) => console.log(err)); //if data doesnt load catch error
+  
+      axios
+      .get("https://moj-api.herokuapp.com/debits") //get the data
+      .then((response) => {
+        const data = response.data;
+        
+        let holder = []; // hold the data for now
+        for (
+          let a = 0;
+          a < data.length;
+          a++ //go through all the data
+        ) {
+          holder = [data[a].description, data[a].amount, data[a].date]; //load the data
+          this.setState({
+            debitInfo: [...this.state.debitInfo, holder],
+            debitBalance: this.state.debitBalance + data[a].amount,
+            accountBalance: this.state.accountBalance - data[a].amount,
+          });
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   //update functions
@@ -98,44 +100,44 @@ class App extends Component {
 
   render() {
     const HomeComponent = () => (
-      <Home accountBalance={this.state.accountBalance} />
+      <Home accountBalance = {this.state.accountBalance} />
     );
     const UserProfileComponent = () => (
       <UserProfile
-        userName={this.state.currentUser.userName}
-        memberSince={this.state.currentUser.memberSince}
+        userName = {this.state.currentUser.userName}
+        memberSince = {this.state.currentUser.memberSince}
       />
     );
     const LogInComponent = () => (
-      <LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />
+      <LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn} />
     );
     const CreditsComponent = () => (
       <Credits
-        updateCreditBalance={this.updateCreditBalance}
-        updateCreditInfo={this.updateCreditInfo}
-        creditInfo={this.state.creditInfo}
-        creditBalance={this.state.creditBalance}
-        accountBalance={this.state.accountBalance}
+        updateCreditBalance = {this.updateCreditBalance}
+        updateCreditInfo = {this.updateCreditInfo}
+        creditInfo = {this.state.creditInfo}
+        creditBalance = {this.state.creditBalance}
+        accountBalance = {this.state.accountBalance}
       />
     );
     const DebitsComponent = () => (
       <Debits
-        updateDebitBalance={this.updateDebitBalance}
-        updateDebitInfo={this.updateDebitInfo}
-        debitInfo={this.state.debitInfo}
-        debitBalance={this.state.debitBalance}
-        accountBalance={this.state.accountBalance}
+        updateDebitBalance = {this.updateDebitBalance}
+        updateDebitInfo = {this.updateDebitInfo}
+        debitInfo = {this.state.debitInfo}
+        debitBalance = {this.state.debitBalance}
+        accountBalance = {this.state.accountBalance}
       />
     );
 
     return (
       <Router>
         <div>
-          <Route exact path="/" render={HomeComponent} />
-          <Route exact path="/userProfile" render={UserProfileComponent} />
-          <Route exact path="/login" render={LogInComponent} />
-          <Route exact path="/credits" render={CreditsComponent} />
-          <Route exact path="/debits" render={DebitsComponent} />
+          <Route exact path = "/" render={HomeComponent} />
+          <Route exact path = "/userProfile" render={UserProfileComponent} />
+          <Route exact path = "/login" render={LogInComponent} />
+          <Route exact path = "/credits" render={CreditsComponent} />
+          <Route exact path = "/debits" render={DebitsComponent} />
         </div>
       </Router>
     );
