@@ -9,7 +9,6 @@ class Debits extends Component {
 
   submitDebit(event) {
     event.preventDefault();
-    console.log("DEBIT SUBMIT VALUE " + event.target.newDebitAmount.value);
     let temp = [
       event.target.debitDes.value,
       event.target.newDebitAmount.value,
@@ -39,16 +38,16 @@ class Debits extends Component {
 
             <form onSubmit={this.submitDebit}>
               <input
-                type="text"
-                name="debitDes"
-                placeholder="Debit Description"
+                type = "text"
+                name = "debitDes"
+                placeholder = "Debit Description"
               />
               <input
-                type="number"
-                name="newDebitAmount"
-                placeholder="Debit amount"
+                type = "number"
+                name = "newDebitAmount"
+                placeholder = "Debit amount"
               />
-              <input type="submit" />
+              <input type = "submit" />
             </form>
           </div>
 
