@@ -1,6 +1,6 @@
 WebDev-Assignment-7
 
-Link to the deployed website: https://argunawan.github.io/WebDev-Assignment-7/
+Link to the deployed website: https://argunawan.github.io/Mock-Bank-Account/
 
 Contributors:
 Alfonso Gunawan, James Yoo, Caitlin-Dawn Sangcap, Ifte Ahmed
